@@ -1,18 +1,10 @@
-"use client"
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Link from 'next/link'
+import React from 'react'
 
-export default function Home() {
-  const router = useRouter()
-
-  const handleClick = () => {
-    router.push("/about")
-  }
-
+const About = () => {
   return (
     <div className="flex w-full h-screen justify-center items-center gap-5">
+        <h1 className='text-2xl font-bold'>About Page</h1>
       <Link
         className="bg-emerald-500 px-4 py-2 rounded-md text-white capitalize"
         href={"/about"}
@@ -38,9 +30,8 @@ export default function Home() {
         {" "}
         go to footer
       </Link>
-      <Button onClick={handleClick}>
-        Navigate to about
-      </Button>
     </div>
-  );
+  )
 }
+
+export default About
